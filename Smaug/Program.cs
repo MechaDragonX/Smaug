@@ -24,6 +24,7 @@ namespace Smaug
             maze[start.X, start.Y] = 2;
             Print();
             Console.WriteLine("---------------------------");
+            Console.Write("Path: ");
             path.Print();
             Console.ReadKey();
         }

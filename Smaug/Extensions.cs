@@ -8,11 +8,13 @@ namespace Smaug.Extensions
 {
     public static class Extensions
     {
-        public static void Print<T>(this LinkedList<T> queue)
+        public static void Print<T>(this LinkedList<T> link)
         {
-            foreach (var item in queue)
+            foreach (var item in link)
             {
-                Console.Write("{0} --> ", item);
+                if(item.Equals(link.Last.Value))
+                    Console.Write("{0}", item);
+                else Console.Write("{0} --> ", item);
             }
         }
     }
